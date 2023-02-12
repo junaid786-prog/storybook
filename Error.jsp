@@ -25,10 +25,21 @@
         <div class="main_section">
          <div class = "error_message_show">
         <%
-          if (message == null) out.println("No error expected");
+          if (message == null){
+            if(response.getStatus() == 404){
+              out.println("404 - Page Not Found! ");
+            } else {
+              out.println("No error expected" + response.getStatus());
+            }
+          }
           else {%>
-          <%= "Error: " + message %>
-          <% } %>
+          <%= "Error: code - " + response.getStatus() + " " + message  %>
+
+          <% 
+            if(exception != null){
+              out.println(exception);
+            }
+          } %>
          </div>
         </div>
     </div>
