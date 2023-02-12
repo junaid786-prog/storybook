@@ -1,0 +1,229 @@
+.st_logo {
+    color: white;
+    padding: 10px 0px;
+    font-size: 3vmin;
+    display: flex;
+    justify-content: center;
+}
+
+.input_combo textarea {
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    margin-top: 10px;
+    outline: none;
+    height: 200px;
+    resize: none;
+}
+
+#create_post_form {
+    width: 500px;
+}
+
+input[type="file"] {
+    padding: 0px;
+    border: none;
+}
+
+input::file-selector-button {
+    border-radius: 3px;
+    border: 1px gray;
+    padding: 10px 10px;
+    cursor: pointer;
+    margin: 10px 0px;
+
+}
+
+input::file-selector-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.posts_container {
+    display: flex;
+    position: relative;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(25, 17, 195, 1) 0%, rgba(30, 21, 236, 1) 4%, rgba(44, 44, 198, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    /* justify-content: space-between; */
+}
+
+.posts_section {
+    padding: 20px;
+}
+
+.all_posts {
+    display: flex;
+    flex-direction: column;
+    min-width: 50vw;
+    max-width: 50vw;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.single_post {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    max-width: 50vw;
+    background-color: rgb(238, 234, 234);
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(238, 234, 234);
+    cursor: pointer;
+}
+
+.single_post img {
+    width: 400px;
+    max-width: 50vw;
+    margin-top: 10px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.post_content {
+    padding: 5px 10px;
+}
+
+.post_below_section {
+    display: flex !important;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 10px 2px;
+    box-sizing: border-box;
+}
+
+.post_below_section p,
+.post_below_section button {
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.post_below_section button {
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    /* width: 0px; */
+}
+
+.post_below_section p:hover,
+.post_below_section button:hover {
+    background-color: black;
+    color: white;
+}
+
+.comments_section {
+    width: 20vw;
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 80vh;
+    overflow-y: scroll;
+    background-color: whitesmoke;
+    margin-top: 20px;
+    margin: 20px 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar {
+    width: 40vw !important;
+    background-color: black;
+    /* position: fixed; */
+    padding: 20px 0px;
+    min-height: 100vh;
+}
+
+.sidebar_combo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 5px 0px;
+    cursor: pointer;
+}
+
+.sidebar_combo a,
+.sidebar_combo p {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px 10px;
+    /* border-radius: 5px; */
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.sidebar_combo a:hover,
+.sidebar_combo p:hover {
+    color: black;
+    background-color: white;
+}
+
+.search_post {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.search_post input {
+    width: 70%;
+    padding: 10px 5px;
+    outline: none;
+    border: 1px solid gray;
+}
+
+.search_post button {
+    width: 30%;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.search_post button:hover {
+    background-color: rgb(157, 150, 150);
+    color: black;
+}
+
+#login_error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.single_comment {
+    background-color: white;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-size: smaller;
+    margin-top: 10px;
+}
+
+.single_comment p:first-child {
+    font-weight: 600;
+}
+
+.liked_post {
+    background-color: blue !important;
+    color: white !important;
+}
+
+.no_post_found {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single_post_container{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}

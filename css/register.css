@@ -1,0 +1,78 @@
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 10px; */
+    width: 100%;
+    min-height: calc(100vh - 50px);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(25,17,195,1) 0%, rgba(30,21,236,1) 4%, rgba(44,44,198,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.form form{
+    /* border: 1px solid black; */
+    margin-top: 20px;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background-color: rgb(233, 227, 227);
+    box-shadow: 5px 10px 10px rgb(225, 220, 220);
+    box-shadow: 5px 8px 10px inset rgb(225, 220, 220);
+    border-radius: 3px;
+}
+
+.form form div{
+    margin-top: 10px;
+}
+.input_combo{
+    width: 100%;
+    margin-top: 30px !important;
+}
+.input_combo input{
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    margin-top: 10px;
+    outline: none;
+}
+.button_wrapper{
+    width: 100%;
+    margin-top: 30px !important;
+}
+.button_wrapper button{
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: medium;
+}
+.button_wrapper button:hover{
+    background-color: rgb(66, 61, 61);
+}
+.input_error{
+    font-size: smaller;
+    color: red;
+    padding: 5px 0px;
+}
+.bottom_register{
+    margin-top: 50px !important;
+}
+.bottom_register p{
+    font-size: smaller;
+    color: gray;
+}
+.bottom_register p a{
+    font-weight: 800;
+    text-decoration: none;
+    color: black;
+}
+.bottom_register p a:hover{
+    color: blue;
+}
