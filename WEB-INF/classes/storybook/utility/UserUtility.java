@@ -103,6 +103,22 @@ public class UserUtility{
         }
     }
 
+    public static ResultSet getAllUsers(){
+        Connection conn = DBConnection.getConnection();
+        try {
+            ResultSet rs = null;
+            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM user");
+            rs = stmt.executeQuery();
+            if (rs.next()) {
+                return rs;
+            } else {
+                return null;
+            }
+        } catch(Exception ex){
+            return null;
+        }
+    }
+
     public static boolean isUserLikedPost(int postId, String author){
         Connection conn = DBConnection.getConnection();
         try {
@@ -174,6 +190,39 @@ public class UserUtility{
             }
         }catch(Exception e){
             return -1;
+        }
+    }
+
+    public static void deleteUser(HttpServletRequest request, HttpServletResponse response, ResultSet user, Connection conn, int id) throws IOException, ServletException{
+        // check if admin
+        // 2. check if user exists
+        try{
+            String sql = "SELECT * FROM user WHERE id = ?";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, id);
+            ResultSet specificPost = pstmt.executeQuery();
+            if (!specificPost.next())
+            {
+                ApiError.sendRequestDispatch(request, response, 404 , "User not found with this id");
+                return;
+            }
+            if (UserUtility.getProfile(request, response) != null && UserUtility.getProfile(request, response).getString("type").equals("admin")){
+                sql = "DELETE FROM user WHERE id = ?";
+                pstmt = conn.prepareStatement(sql);
+                pstmt.setInt(1, id);
+                pstmt.executeUpdate();
+            }else{
+                ApiError.sendRequestDispatch(request, response, 403 , "You are not authorized to this");
+                return;
+            }
+            pstmt.close();
+            conn.close();
+            response.setStatus(201);
+            response.sendRedirect("Users.jsp");
+            return;
+        }catch(Exception e){
+            ApiError.sendRequestDispatch(request, response, 500 , "Internal Server Error - " + e);
+            return;
         }
     }
 }

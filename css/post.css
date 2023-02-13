@@ -227,3 +227,11 @@ input::file-selector-button:hover {
     display: flex;
     justify-content: center;
 }
+.links_section{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.links_section a{
+    color: white !important;
+}

@@ -15,6 +15,10 @@
     <request-character-encoding>UTF-8</request-character-encoding>
 
     <!-- Define example filters -->
+    <context-param>
+      <param-name> </param-name>
+      <param-value> </param-value>
+    </context-param>
     <servlet>
       <servlet-name> login </servlet-name>
       <servlet-class> storybook.servlets.SigninServlet </servlet-class>
@@ -85,6 +89,15 @@
    <servlet-mapping>
       <servlet-name> logout </servlet-name>
       <url-pattern> /user/logout </url-pattern>
+   </servlet-mapping>
+
+   <servlet>
+      <servlet-name> deleteUser </servlet-name>
+      <servlet-class> storybook.servlets.UserServlet </servlet-class>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name> deleteUser </servlet-name>
+      <url-pattern> /delete </url-pattern>
    </servlet-mapping>
 
    <error-page>

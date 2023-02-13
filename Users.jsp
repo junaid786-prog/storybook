@@ -17,12 +17,12 @@
            <jsp:param name="type" value= "<%= type %>" />
     </jsp:include>
     <div class = "main_section_">
-      <div class = "links_section"><a href = 'Users.jsp'> USERS </a> </div>
+    <div class = "links_section"><a href = 'Dashboard.jsp'> POSTS </a> </div>
       <div class="main_section_heading">
-        <h3> POSTS </h3>
+         <h3> USERS </h3>
       </div>
       <div class = 'admin_posts'>
-        <jsp:include page="components/admin/Posts.jsp"/>
+        <jsp:include page="components/admin/Users.jsp"/>
       </div>
     </div>
 
